@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #f5f2fe;
+    --background-color: #f8f9fa;
+    --box-shadow: 0 5px 10px rgba(172, 137, 137, 0.3);    
+}
+
+body {
+    margin: 100px auto;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+h3 {
+    font-size: 24px;
+    opacity: 0.7;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+.navigation-links {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.navigation-links a {
+    margin: 20px;
+    border-radius: 4px;
+    padding: 20px 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.contact-link {
+    background: var(--primary-color);
+    box-shadow: var(--box-shadow);
+    color: white;
+}
+
+.about-link {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.homepage-link {
+    color: var(--primary-color);
+    text-align: center;
+    display: block;
+}
+
+.about {
+    display: flex;
+    margin: 30px 0;
+}
+
+.about p {
+    margin: 10px;
+    text-align: center;
+}
+
+p {
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.email-link {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.container p{
+    text-align: left;
+}
+
+.my-style-link {
+    position: relative;
+    border-radius: 4px;
+    padding: 20px 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    background: var(--primary-color);
+    box-shadow: var(--box-shadow);
+    color: white;
+    bottom: 25px;
+}
+
+a:hover {
+    color: #0a58ca;
+}
+
+.my-nav-content{
+    display: flex;
+    
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 30px;
+    height: 1px;
+    margin-top: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+}
+
+@media(max-width:1000px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+     transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+     transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar-nav{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--background-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .navbar-nav.active{
+        left: 0;
+    }
+
+}
